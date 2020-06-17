@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "381066852957",
+    "firebase_url": "https://picflow-fd1f3.firebaseio.com",
+    "project_id": "picflow-fd1f3",
+    "storage_bucket": "picflow-fd1f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381066852957:android:9d3df880991c552733abb4",
+        "android_client_info": {
+          "package_name": "danmainge.picflowapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381066852957-n5dv5evlkns4sa9c9t1o6oq2qe9il8iu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA97xuiGkiS9DGmQi2wEGSjUnecKtcU9iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381066852957-n5dv5evlkns4sa9c9t1o6oq2qe9il8iu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
