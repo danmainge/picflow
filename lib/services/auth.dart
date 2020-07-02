@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:picflowapp/models/user.dart';
 import 'package:picflowapp/services/database.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:picflowapp/Notifer/Notifer_post.dart';
+import 'package:picflowapp/posts/posts.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -65,5 +68,16 @@ class AuthService {
       print(e.toString());
       return null;
     }
+  }
+
+  getPosts(PostNotifier postNotifier) async {
+    QuerySnapshot snapshot =
+        await Firestore.instance.collection('post').getDocuments();
+    List<Post> _postList = [];
+    snapshot.documents.forEach((document) {
+      Post post = Post.fromMap(document.data);
+      _postList.add(post);
+    });
+    postNotifier.postList = _postList;
   }
 }

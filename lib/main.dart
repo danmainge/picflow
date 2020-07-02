@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:picflowapp/Notifer/Notifer_post.dart';
 import 'package:picflowapp/screens/wrapper.dart';
 import 'package:picflowapp/services/auth.dart';
 import 'package:provider/provider.dart';
 import 'package:picflowapp/models/user.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MultiProvider(
+      providers: [ChangeNotifierProvider(builder: (context) => PostNotifier())],
+      child: MyApp(),
+    ));
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
